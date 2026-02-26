@@ -17,7 +17,7 @@ jobs:
         with:
           path: './src'
       - name: Generate the artifacts
-        uses: Vba-actions/build-excel-addin@dev
+        uses: Vba-actions/build-excel-addin@v1
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
