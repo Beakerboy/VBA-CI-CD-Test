@@ -16,6 +16,8 @@ jobs:
         uses: Vba-actions/lint-vba@v1
         with:
           path: './src'
+      - name: Generate the artifacts
+        uses: Vba-actions/build-excel-addin@dev
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
