@@ -11,8 +11,14 @@ jobs:
     name: Test and Static Analysis
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
-    - name: Lint
-      uses: Vba-actions/lint-vba@v1
-      with:
-        path: './src'
+      - uses: actions/checkout@v3
+      - name: Lint
+        uses: Vba-actions/lint-vba@v1
+        with:
+          path: './src'
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          path: Addin.xlam
+          retention-days: 7
+          if-no-files-found: error
