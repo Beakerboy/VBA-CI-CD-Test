@@ -24,7 +24,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
       - name: Generate the artifacts
-        uses: Vba-actions/build-excel-addin@dev
+        uses: Vba-actions/build-excel-addin@v1
       - name: Upload the artifacts
         uses: skx/github-action-publish-binaries@master
         env:
